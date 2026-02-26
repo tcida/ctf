@@ -5,21 +5,14 @@
 
   
 
-<iframe id="f" style="display:none;"></iframe>
-
 <button name="Submit" onclick="
-  let f = document.getElementById('f');
-  f.src = 'http://127.0.0.1:3000/reach_nirvana';
+  window.location = 'http://127.0.0.1:3000/reach_nirvana';
   setTimeout(() => {
-    try {
-      document.title = f.contentDocument.body.innerText;
-    } catch(e) {}
+      history.back();
   }, 500);
-  return false;
 ">
 Submit
 </button>
-
   
 </body>
 </html>
