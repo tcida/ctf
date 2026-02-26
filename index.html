@@ -5,14 +5,11 @@
 
   
 
-<button name="Submit" onclick="
-  window.location = 'http://127.0.0.1:3000/reach_nirvana';
-  setTimeout(() => {
-      history.back();
-  }, 50);
-">
-Submit
-</button>
+<form action="http://127.0.0.1:3000/reach_nirvana" method="POST">
+  <button name="Submit" formmethod="DELETE">
+    Submit
+  </button>
+</form>
   
 </body>
 </html>
