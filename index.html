@@ -2,9 +2,10 @@
 <html>
 <body>
 
-<button onclick="location.href='http://127.0.0.1:3000/reach_nirvana'">
-Submit
-</button>
+<form action="http://127.0.0.1:3000/reach_nirvana?_method=DELETE" method="POST">
+</form>
+
+<button onclick="document.forms[0].submit()">Submit</button>
 
 </body>
 </html>
